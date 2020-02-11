@@ -3,15 +3,19 @@ import { render } from 'react-dom';
 import './index.css';
 import TodoApp from './components/TodoApp';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import tasksReducer from './reducers/tasks';
+import { ConnectedRouter } from 'react-router-redux';
+import createStore from './store';
+import { createBrowserHistory as createHistory } from 'history';
 
-const store = createStore(tasksReducer);
+const history = createHistory();
 
+const store = createStore(history);
 
 render (
   <Provider store={store}>
-    <TodoApp />
+    <ConnectedRouter history={history}>
+      <TodoApp />
+    </ConnectedRouter>
   </Provider>,
   document.getElementById('root')
 );
