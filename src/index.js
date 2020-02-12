@@ -10,7 +10,7 @@ import { createBrowserHistory as createHistory } from 'history';
 const history = createHistory();
 
 const store = createStore(history);
-
+console.log(store);
 render (
   <Provider store={store}>
     <ConnectedRouter history={history}>
