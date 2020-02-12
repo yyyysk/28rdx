@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import './index.css';
-import TodoApp from './components/TodoApp';
+import TodoApp from './containers/TodoApp';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import createStore from './store';

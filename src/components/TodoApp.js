@@ -2,7 +2,8 @@ import React from 'react';
 import { inputTask, addTask } from '../actions/tasks';
 
 export default function TodoApp({ store }) {
-  const { task, tasks } = store.getState();
+  console.log(store);
+  const { task, tasks } = store;
 
   return (
     <div>
